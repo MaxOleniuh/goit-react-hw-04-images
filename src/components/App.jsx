@@ -7,40 +7,13 @@ import Modal from "./Modal/Modal";
 import { fetchImages } from '../services/pixabayApi';
 
 export const App = () => {
-  // const [state, setState] = useState({
-  //   images: [],
-  //   page: 1, 
-  //   query: "",
-  //    isLoading: false,
-  //    dataModal: {image: '', alt: ''},
-  //   isModalOpen: false,
-  // });
+
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
   const [query, setQueryValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [dataModal, setDataModal] = useState({image: '', alt: ''});
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // getSnapshotBeforeUpdate() {
-  //   return document.body.clientHeight - 75.63;
-  // }
-  // componentDidUpdate(prevProps, prevState, snapshot) {
-    // if (
-    //   (prevState.query !== this.state.query && this.state.query !== '') || 
-    //   prevState.page !== this.state.page
-    // ) {
-    //   this.getSearchedImages();
-    // }
-
-  //   if (prevState.images.length !== this.state.images.length && this.state.page !== 1) {
-  //     console.log("scroll");
-  //     window.scrollTo({
-  //       top: snapshot,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // }
 
   const getSearchedImages = async () => {
     setIsLoading(true);
