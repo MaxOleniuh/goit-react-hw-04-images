@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import ImageGalleryItem from "components/ImageGalleryItem/ImageGalleryItem";
 import { ListStyled} from './ImageGallery.styled';
-const ImageGallery = ({images, openModal}) => {
+const ImageGallery = ({ images, openModal }) => {
+  console.log(images)
   return (
 
     <ListStyled>{images.map((({ webformatURL, id, largeImageURL, tags }) => <ImageGalleryItem key={id} webformatURL={webformatURL}
@@ -11,7 +12,7 @@ const ImageGallery = ({images, openModal}) => {
    )
 }
 ImageGallery.propTypes = {
-  images: PropTypes.array.isRequired,
+  images: PropTypes.array,
   openModal: PropTypes.func.isRequired
 }
 export default ImageGallery;
