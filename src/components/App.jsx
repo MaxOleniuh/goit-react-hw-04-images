@@ -19,7 +19,7 @@ export const App = () => {
     setIsLoading(true);
     try {
       const data = await fetchImages(query, page);
-      setImages([...images, ...data.hits]);
+      setImages((prevState) => [...prevState, ...data.hits]);
     } catch (error) {
       alert('Error!', error);
     } finally {
