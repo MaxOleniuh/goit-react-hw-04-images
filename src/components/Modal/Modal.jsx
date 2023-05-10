@@ -32,8 +32,6 @@ export const Modal = ({closeModal, modalData}) => {
     );
   }
 Modal.propTypes = {
-  image: PropTypes.string,
-  alt: PropTypes.string,
   modalData: PropTypes.object.isRequired,
   closeModal: PropTypes.func.isRequired,
 }
